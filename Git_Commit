@@ -1,0 +1,27 @@
+# Commit
+
+- **git init**:activer un dossier comme repository Git
+> Configuration de compte sur machine locale
+>git config --global user.name "Votre nom ou pseudo"
+>git config --global user.email "Votre@email.com"
+
+- **git add nomDeVotreFichier.extension**: ajouter à l'index 
+- **commit -m "commit_name"**: demander à Git d'enregistrer vos modifications en faisant un git commit. L'option "-m"  permet de lui envoyer un message décrivant les modifications effectuées
+>  commit -a -m "commit_name"  == git add + git commit : 
+>  - -a demande à Git de mettre à jour les fichiers déjà existants dans son index.
+
+- **git log**: qui vous affiche la liste de tous les commits qu'on a réalisés
+> Dans la liste de cet historique, chaque commit est répertorié avec :
+> - son SHA : son identifiant unique, qui se présente sous forme d'une longue chaîne de caractères et de nombres. Par exemple : "87753191cef0bdb955a4cb4ff841f7c2cce4cb1c".
+>- son auteur : qui a fait le commit (utile lorsqu'on travaille à plusieurs sur un projet !)
+>sa date
+> - sa description : c'est le message de description qu'on a indiqué avec l'option  -m lorsque'on fait votre git commit
+
+- **git checkout SHADuCommit**: positionner sur un commit donné de l'historique
+> git checkout master:Pour revenir à votre branche principale (au commit le plus récent)
+- **git revert SHADuCommit**:  "revert" un commit, c'est-à-dire créer un nouveau commit qui fait l'inverse du précédent
+- **git commit --amend -m "Votre nouveau message"**: modifier le message de dernier commit
+- **git reset --hard**: annuler tous les changements qu'on a pas encore commités.
+- **git clone lienFourniParGitHub**:copier un repository sur machine locale
+> - L'option HTTPS, qui demande de fournir vos identifiants GitHub (nom d'utilisateur et mot de passe) à chaque fois que vous faites un git clone. 
+> - L'option SSH qui est plus pratique car elle ne demande pas d'identifiants à chaque fois. Par contre, pour l'utiliser, il faut générer une clé SSH.

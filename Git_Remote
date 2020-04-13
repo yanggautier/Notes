@@ -1,0 +1,27 @@
+# Remote
+- **git push origin master**：Envoyer les modifications sur le repo GitHub 
+>Envoie mes modifs dans la branche master de remote origin.
+>La branche master est la branche qui contient le code courant de votre repo GitHub. 
+- **git pull origin master**: Pour récupérer en local les dernières modifications du repo GitHub
+- **git branch nouvelle-branche**: Pour créer une nouvelle branche
+> - **git branch**: voir la branche qu'on se situe 
+> - **git branch -d branchName**: supprime la branche avec le nom donné
+- **git checkout nouvelle-branche**: Pour  placer dans une autre branche à l'intérieur de repo
+> - **git checkout -b ma-branche**: Créer et sélectionner la branche en même temps
+> **git merge brancheB**: Fussionner la branche B avec la branche courant
+- **git blame nomdufichier.extension**： liste toutes les modifications qui ont été faites sur le fichier ligne par ligne. À chaque modification est associé le début du sha du commit correspondant. Par exemple : 
+> Pour retrouver pourquoi cette modification a été faite, vous avez deux possibilités : 
+>- Faire un git log et rechercher le commit dont le sha commence par 05b1233. 
+>- Utiliser la commande git show qui vous renvoie directement les détails du commit recherché en saisissant le début de son sha : 
+>  - **git show 05b1233**
+- **git checkout -b branchName**: Créer une branche et se mettre là-dessus
+### Ignorer un fichier
+> - touch .gitignore: puis ajouter les noms des fichiers qu'on veut ignorer
+
+### Évitez des commits superflus
+- **git stash**: mettre de côté vos modifications en cours
+- **git stash pop**: irécupérez les modifications qu'on a  mis de côté
+ >  pop vide votre stash des modifications que vous aviez rangées dedans. Donc une fois que vous avez récupéré ces modifications dans votre branche, il vous faut finir votre tâche et les committer ! (ou bien les remettre de côté en exécutant à nouveau la commande git stash).
+- **git stash apply**: garder les modifications dans votre stash
+
+- **git push origin my-new-feature**： Envoyer les modifications sur GitHub en faisant un git push de la nouvelle branche 
